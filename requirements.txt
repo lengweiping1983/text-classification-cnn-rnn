@@ -1,3 +1,4 @@
-scikit-learn
-scipy
 numpy
+scikit-learn
+thulac
+tensorflow
