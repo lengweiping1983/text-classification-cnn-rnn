@@ -2,8 +2,8 @@
 
 使用卷积神经网络以及循环神经网络进行中文文本分类
 
-该例子是fork https://github.com/gaussic/text-classification-cnn-rnn(https://github.com/gaussic/text-classification-cnn-rnn)
-优化并增加分词，过滤停用词等操作，CNN与RNN模型的性能都有提升, CNN,RNN在测试数据集中准确率分别是96.95%, 95.55%
+该例子是fork [https://github.com/gaussic/text-classification-cnn-rnn](https://github.com/gaussic/text-classification-cnn-rnn)
+优化并增加分词，过滤停用词等操作，CNN与RNN模型的性能都有提升, 在测试数据集中准确率分别是96.95%, 95.55%。
 
 CNN做句子分类的论文可以参看: [Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1408.5882)
 
@@ -51,8 +51,8 @@ CNN做句子分类的论文可以参看: [Convolutional Neural Networks for Sent
 
 ## 预处理
 
-`data/cnews_loader.py`为数据的预处理文件。
-`data/stopwords.txt`为停用词表文件。
+- `data/cnews_loader.py`为数据的预处理文件。
+- `data/stopwords.txt`为停用词表文件。
 
 - `read_file()`: 读取文件数据，并使用thulac对内容进行分词;
 - `build_vocab()`: 构建词汇表，使用字符级的表示，这一函数会将词汇表存储下来，避免每一次重复处理;
@@ -160,7 +160,7 @@ Iter:     3500, Train Loss:   0.0015, Train Acc:  100.00%, Val Loss:     0.18, V
 No optimization for a long time, auto-stopping...
 ```
 
-在验证集上的最佳效果为96.28%。
+本次试验在验证集上准确率为96.28%。
 
 准确率和误差如图所示：
 
@@ -210,7 +210,7 @@ Time usage: 0:00:37
 从混淆矩阵也可以看出分类效果非常优秀。
 
 
-### 训练CNN几次，在测试集上最好的成绩达到了97.51%
+### 训练几次CNN，在测试集上最好的成绩达到了97.51%
 ```
 Training and evaluating...
 Epoch: 1
@@ -239,6 +239,7 @@ Iter:     1900, Train Loss:   0.0024, Train Acc:  100.00%, Val Loss:     0.19, V
 Iter:     2000, Train Loss:  0.00066, Train Acc:  100.00%, Val Loss:     0.18, Val Acc:   94.70%, Time: 0:23:22
 No optimization for a long time, auto-stopping...
 
+本次试验在验证集上准确率为96.14%， 在测试集上准确率为97.51%。
 Testing...
 Test Loss:    0.081, Test Acc:   97.51%
 Precision, Recall and F1-Score...
@@ -360,7 +361,7 @@ Iter:     3000, Train Loss:    0.058, Train Acc:   98.44%, Val Loss:     0.38, V
 No optimization for a long time, auto-stopping...
 ```
 
-在验证集上的最佳效果为92.10%。
+本次试验在验证集上准确率为92.10%。
 
 准确率和误差如图所示：
 
