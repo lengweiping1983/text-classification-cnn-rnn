@@ -501,7 +501,9 @@ Time usage: 0:02:30
 
 > 根据测试结果表明，在本场景中：
 > 1、GRU性能优于LSTM。
+
 > 2、GRU收敛优于LSTM。
+
 > 3、LSTM在初始化时，给forget_bias设一个比较大的值是有帮助的，本例使用forget_bias=1.0
 
 
