@@ -45,7 +45,7 @@ class TextRNN(object):
         """RNN模型"""
 
         def lstm_cell():  # lstm核
-            return tf.contrib.rnn.BasicLSTMCell(self.config.hidden_dim, state_is_tuple=True)
+            return tf.contrib.rnn.BasicLSTMCell(self.config.hidden_dim, state_is_tuple=True, forget_bias=1.0)
 
         def gru_cell():  # gru核
             return tf.contrib.rnn.GRUCell(self.config.hidden_dim)
